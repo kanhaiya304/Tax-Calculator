@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tax Calculator</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+<h1>Tax Calculator</h1>
+
+<form id="taxForm">
+
+
+  <div class="Massage">
+   <p class="Massage1">Gross Annual Income Is Your Total Salary In A Year Before Any Deduction</p>
+   <p class="Massage2">Extra Income Is Your Extra Income From Other Source</p>
+   <p class="Massage3">Select Your In Following Age Group</p>
+   <p class="Massage4">Enter Your Deduction In A Year</p>
+</div>
+    
+  <div class="form-group">
+    <label for="income">Gross Annual Income (in Lakhs) <i class="fa-regular fa-circle-question icon1" style="color: #a8a8a8;"></i></label>
+    <input type="number" id="income" class="input-field" required placeholder="Enter Your Gross Annual Income Here">
+    <span class="error-icon" id="incomeError">&#9888;</span>
+  </div>
+  
+  <div class="form-group">
+    <label for="extraIncome">Extra Income (in Lakhs) <i class="fa-regular fa-circle-question icon2" style="color: #a8a8a8;"></i></label>
+    <input type="number" id="extraIncome" class="input-field" placeholder="Enter Your Extra Income Here">
+    <span class="error-icon" id="extraIncomeError">&#9888;</span>
+  </div>
+  
+  <div class="form-group">
+    <label for="age">Age <i class="fa-regular fa-circle-question icon3" style="color: #a8a8a8;"></i></label>
+    <select id="age" class="input-field" required>
+      <option value="<40">&lt;40</option>
+      <option value=">=40&<60">&ge;40 &lt;60</option>
+      <option value=">=60">&ge;60</option>
+    </select>
+    <span class="error-icon" id="ageError">&#9888;</span>
+  </div>
+  
+  <div class="form-group">
+    <label for="deductions">Deductions (in Lakhs) <i class="fa-regular fa-circle-question icon4" style="color: #a8a8a8;"></i></label>
+    <input type="number" id="deductions" class="input-field" placeholder="Enter Applicable Deduction Here">
+    <span class="error-icon" id="deductionsError">&#9888;</span>
+  </div>
+  
+  <button type="submit">Calculate Tax</button>
+</form>
+
+<div id="modal" class="modal">
+  <div class="modal-content">    
+    <h3>Your Overall Income Will be</h3>
+    <h4 id="Income"></h4>
+    <p id="result"></p>
+    <button class="close closebtn" style="font-size: 1rem;">Close</button>
+  </div>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
